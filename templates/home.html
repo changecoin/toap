@@ -3,7 +3,7 @@
 {% block bodyclass %}{{ block.super }}home{% endblock bodyclass%}
 
 {% block content %}
-<div class="content-home">
+<div class="content-screen">
     <div class="wordmark"></div>
     {% if user.is_authenticated %}
         Logged in as {{user}}
@@ -13,5 +13,7 @@
             <input type="image" src="https://cdn.changetip.com/img/sign-in-with-changetip.png">
         </form>
     {% endif %}
+</div>
+<div class="content-print">
 </div>
 {% endblock content %}

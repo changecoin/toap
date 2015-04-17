@@ -5,6 +5,10 @@ $color-black: #000;
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
 @media screen {
     html {
         height: 100%;
@@ -45,5 +49,28 @@ $color-black: #000;
         overflow: hidden;
         position: relative;
         width: 100%;
+    }
+
+    .link {
+        font-weight: 900;
+        position: absolute;
+        right: 1.3in;
+        top: 1.3in;
+        transform: rotate(45deg);
+
+        .qr {
+            display: block;
+            height: 1in;
+            margin: -.5in 0 0 -.5in;
+            position: absolute;
+            width: 1in;
+        }
+
+        .text {
+            margin: .5in 0 0 -2in;
+            position: absolute;
+            text-align: center;
+            width: 4in;
+        }
     }
 }

@@ -19,8 +19,9 @@ body {
 
     body {
         background: linear-gradient(to bottom, $color-darkblue, mix($color-darkblue, $color-black, 50%));
-        margin: 0;
+        margin: 20px 0;
         min-height: 100%;
+        text-align: center;
     }
 
     .content-print { display: none; }
@@ -30,9 +31,14 @@ body {
             background-image: url("/public/img/wordmark.png");
             background-size: 100%;
             height: 285px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             width: 800px;
         }
+    }
+
+    .sign-in-button {
+        height: 44px;
+        width: 200px;
     }
 }
 

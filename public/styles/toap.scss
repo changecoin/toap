@@ -1,5 +1,7 @@
 $color-darkblue: #005296;
 $color-black: #000;
+$color-white: #fff;
+$pilot-size: .35in;
 
 * {
     box-sizing: border-box;
@@ -7,6 +9,7 @@ $color-black: #000;
 
 body {
     font-family: "Helvetica Neue", sans-serif;
+    font-size: 12pt;
 }
 
 @media screen {
@@ -52,10 +55,9 @@ body {
     }
 
     .link {
-        font-weight: 900;
         position: absolute;
-        right: 1.3in;
-        top: 1.3in;
+        right: 1.25in;
+        top: 1.25in;
         transform: rotate(45deg);
 
         .qr {
@@ -67,10 +69,39 @@ body {
         }
 
         .text {
-            margin: .5in 0 0 -2in;
+            font-weight: 900;
+            margin: .55in 0 0 -2in;
             position: absolute;
             text-align: center;
             width: 4in;
+
+            span {
+                color: mix($color-black, $color-white, 50%);
+                display: block;
+                font-size: .8em;
+                font-weight: normal;
+            }
         }
+    }
+
+    .pilot,
+    .co-pilot {
+        border: 1px solid $color-black;
+        border-radius: $pilot-size;
+        height: $pilot-size;
+        left: 50%;
+        position: absolute;
+        top: 2.5in;
+        width: $pilot-size;
+    }
+
+    .pilot {
+        margin-left: .1in;
+        transform: rotate(90deg);
+    }
+
+    .co-pilot {
+        margin-left: -.1in - $pilot-size;
+        transform: rotate(-90deg);
     }
 }

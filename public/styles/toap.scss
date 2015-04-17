@@ -1,0 +1,15 @@
+$color-darkblue: #005296;
+
+body {
+    background: $color-darkblue;
+}
+
+.content-home {
+    .wordmark {
+        background-image: url("/public/img/wordmark.png");
+        background-size: 100%;
+        height: 285px;
+        margin: 0 auto;
+        width: 800px;
+    }
+}

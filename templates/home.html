@@ -1,1 +1,10 @@
-Hello, world!
+{% extends "base.html" %}
+
+{% block bodyclass %}{{ block.super }}home{% endblock bodyclass%}
+
+{% block content %}
+<div class="content-home">
+    <div class="wordmark"></div>
+    test
+</div>
+{% endblock content %}

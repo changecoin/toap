@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK,CACD,UAAU,CAHG,OAAO,CAOpB,uBAAU,CACN,gBAAgB,CAAE,+BAA+B,CACjD,eAAe,CAAE,IAAI,CACrB,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,MAAM,CACd,KAAK,CAAE,KAAK",
+"sources": ["toap.scss"],
+"names": [],
+"file": "toap.css"
+}

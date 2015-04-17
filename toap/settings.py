@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
     'toap',
 )
 
@@ -102,3 +103,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Python Social Auth Backends
+LOGIN_REDIRECT_URL = '/'
+AUTHENTICATION_BACKENDS = (
+    'social.backends.changetip.ChangeTipOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+SOCIAL_AUTH_CHANGETIP_KEY = os.getenv("CHANGETIP_KEY")
+SOCIAL_AUTH_CHANGETIP_SECRET = os.getenv("CHANGETIP_SECRET")
+assert SOCIAL_AUTH_CHANGETIP_KEY and SOCIAL_AUTH_CHANGETIP_SECRET, "CHANGETIP_KEY and CHANGETIP_SECRET must be set as environment variables"

@@ -9,7 +9,7 @@
         Logged in as {{user}}
     {% else %}
         <form action="/login/changetip/" method="post">
-            {{csrf}}
+            {% csrf_token %}
             <input type="image" src="https://cdn.changetip.com/img/sign-in-with-changetip.png">
         </form>
     {% endif %}

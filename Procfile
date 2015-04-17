@@ -1,1 +1,1 @@
-web: gunicorn toap:app --preload --log-file -
+web: gunicorn toap:wsgi --preload --log-file -

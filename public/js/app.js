@@ -16,7 +16,7 @@ $(function() {
         });
     });
 
-    $(".print a").on("click", function(e) {
+    $(".print button").on("click", function(e) {
         e.preventDefault();
         window.print();
     });

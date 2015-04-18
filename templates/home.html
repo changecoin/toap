@@ -6,14 +6,17 @@
 <div class="content-screen">
     <div class="wordmark"></div>
     {% if user.is_authenticated %}
-        <form action="/tip-url" method="post">
-            {% csrf_token %}
-            <input type="text" name="text_amount" placeholder="amount to send">
-            <input type="submit">
-        </form>
         <div class="user">
             <img src="{{extra_data.picture_url}}">
             <a href="/logout/">logout</a>
+        </div>
+        <form class="tip-form" action="/tip-url" method="post">
+            {% csrf_token %}
+            <input type="text" name="text_amount" placeholder="Throw away how much?">
+            <input type="submit">
+        </form>
+        <div class="print">
+            <a href="#">Print your plane</a>
         </div>
     {% else %}
         <form action="/login/changetip/" method="post">
@@ -21,13 +24,14 @@
             <input class="sign-in-button" type="image" src="/public/img/sign-in-with-changetip.png">
         </form>
     {% endif %}
+    <div class="plane-preload"></div>
 </div>
 <div class="content-print">
     <img class="pilot" src="{{extra_data.picture_url}}">
     <img class="co-pilot" src="/public/img/sam.jpg">
     <div class="link">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=http://tip.me/once/rsrD-ocXWkfk&size=320x320">
-        <div class="text"><span>Collect your tip here!</span>http://tip.me/once/rsrD-ocXWkfk</div>
+        <div class="text">Collect your tip here!<span></span></div>
     </div>
 </div>
 {% endblock content %}

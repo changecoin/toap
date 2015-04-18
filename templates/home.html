@@ -6,6 +6,11 @@
 <div class="content-screen">
     <div class="wordmark"></div>
     {% if user.is_authenticated %}
+        <form action="/tip-url" method="post">
+            {% csrf_token %}
+            <input type="text" name="text_amount" placeholder="amount to send">
+            <input type="submit">
+        </form>
         <div class="user">
             <img src="{{extra_data.picture_url}}">
             <a href="/logout/">logout</a>

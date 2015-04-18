@@ -31,11 +31,11 @@ a {
 
 @media screen {
     html {
+        background: linear-gradient(to bottom, $color-darkblue, mix($color-darkblue, $color-black, 50%));
         height: 100%;
     }
 
     body {
-        background: linear-gradient(to bottom, $color-darkblue, mix($color-darkblue, $color-black, 50%));
         margin: 0;
         min-height: 100%;
         text-align: center;
@@ -121,12 +121,6 @@ a {
             display: block;
         }
     }
-
-    .plane-preload {
-        background: url("/public/img/plane-bg.png");
-        left: -1000000px;
-        position: absolute;
-    }
 }
 
 @media print {
@@ -139,8 +133,6 @@ a {
     .content-screen { display: none; }
 
     .content-print {
-        background: url("/public/img/plane-bg.png");
-        background-size: 100%;
         display: none;
         height: 100%;
         overflow: hidden;
@@ -150,6 +142,12 @@ a {
 
     .done .content-print {
         display: block;
+    }
+
+    .plane-bg {
+        height: 100%;
+        position: absolute;
+        width: 100%;
     }
 
     .link {

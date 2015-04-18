@@ -4,6 +4,7 @@ from changetip_api import ChangeTipApi
 
 
 def home(request):
+    context = {}
     if request.user.is_authenticated():
         # Do we have the extra data pulled in?
         social_auth = request.user.social_auth.filter(provider="changetip").first()
@@ -16,7 +17,8 @@ def home(request):
         else:
             extra_data = social_auth.extra_data
 
-    context = {"extra_data": extra_data}
+        context["extra_data"] = extra_data
+
     return render_to_response('home.html', context, context_instance=RequestContext(request))
 
 

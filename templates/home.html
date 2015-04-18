@@ -13,7 +13,8 @@
         <form class="tip-form" action="/tip-url" method="post">
             {% csrf_token %}
             <input type="text" name="text_amount" placeholder="Throw away how much?">
-            <input type="submit">
+            <input type="submit" value="Launch!">
+            <div class="help-block">Use <b>dollars</b> ($0.10, $2.50), <b>bitcoin</b> (0.2 btc, 500 bits) or <b><a href="https://www.changetip.com/tip-amounts" target="_blank">monikers</a></b> (beer, burrito, coffee) </div>
         </form>
         <div class="print">
             <button>Print your plane</button><br>

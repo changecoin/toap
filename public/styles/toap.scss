@@ -151,15 +151,14 @@ a {
     }
 
     .link {
+        bottom: 1in;
+        left: 1in;
         position: absolute;
-        right: 1.25in;
-        top: 1.25in;
-        transform: rotate(45deg);
+        transform: rotate(-78.75deg);
 
         .qr {
             display: block;
             height: 1in;
-            margin: -.5in 0 0 -.5in;
             position: absolute;
             width: 1in;
         }
@@ -167,15 +166,15 @@ a {
         .text {
             color: mix($color-black, $color-white, 50%);
             font-family: $font-helvetica;
-            font-size: .8em;
-            margin: .55in 0 0 -2in;
+            font-size: 1.2em;
+            left: 1.15in;
+            line-height: .9em;
             position: absolute;
-            text-align: center;
-            width: 4in;
+            top: .6in;
+            white-space: nowrap;
 
             span {
                 display: block;
-                font-size: 12pt;
                 font-weight: 900;
             }
         }

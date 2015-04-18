@@ -27,6 +27,8 @@ body {
     .content-print { display: none; }
 
     .content-screen {
+        padding-top: 1px;
+
         .wordmark {
             background-image: url("/public/img/wordmark.png");
             background-size: 100%;

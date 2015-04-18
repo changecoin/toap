@@ -6,7 +6,10 @@
 <div class="content-screen">
     <div class="wordmark"></div>
     {% if user.is_authenticated %}
-        Logged in as {{user}}
+        <div class="user">
+            <img src="{{extra_data.picture_url}}">
+            <a href="/logout/">logout</a>
+        </div>
     {% else %}
         <form action="/login/changetip/" method="post">
             {% csrf_token %}
@@ -15,8 +18,8 @@
     {% endif %}
 </div>
 <div class="content-print">
-    <img class="pilot" src="https://cdn.changetip.com/user_profile_images/b8c06289-a7bc-4f9b-ae3b-4c7a5a299742">
-    <img class="co-pilot" src="https://cdn.changetip.com/user_profile_images/b8c06289-a7bc-4f9b-ae3b-4c7a5a299742">
+    <img class="pilot" src="{{extra_data.picture_url}}">
+    <img class="co-pilot" src="{{extra_data.picture_url}}">
     <div class="link">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=http://tip.me/once/rsrD-ocXWkfk&size=320x320">
         <div class="text"><span>Collect your tip here!</span>http://tip.me/once/rsrD-ocXWkfk</div>

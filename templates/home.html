@@ -19,6 +19,11 @@
             <a href="#">Print your plane</a>
         </div>
     {% else %}
+        <ul class="steps">
+            <li class="step1">Sign in with ChangeTip</li>
+            <li class="step2">Choose an amount</li>
+            <li class="step3">Print a paper airplane</li>
+        </ul>
         <form action="/login/changetip/" method="post">
             {% csrf_token %}
             <input class="sign-in-button" type="image" src="/public/img/sign-in-with-changetip.png">
@@ -31,7 +36,7 @@
     <img class="co-pilot" src="/public/img/sam.jpg">
     <div class="link">
         <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=http://tip.me/once/rsrD-ocXWkfk&size=320x320">
-        <div class="text">Collect your tip here!<span>http://www.foo.bar.whatever/something/</span></div>
+        <div class="text">Collect your tip here!<span></span></div>
     </div>
 </div>
 {% endblock content %}

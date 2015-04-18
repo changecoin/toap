@@ -1,5 +1,6 @@
+from django.contrib.auth import logout as django_logout
+from django.shortcuts import redirect, render_to_response
 from django.template import RequestContext
-from django.shortcuts import render_to_response
 from changetip_api import ChangeTipApi
 
 
@@ -21,6 +22,10 @@ def home(request):
 
     return render_to_response('home.html', context, context_instance=RequestContext(request))
 
+
+def logout(request):
+    django_logout(request)
+    return redirect("/")
 
 def plane(request):
     context = {"tip_url": request.GET.get("tip_url")}
